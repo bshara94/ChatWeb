@@ -1,0 +1,30 @@
+{
+  "name": "chat-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bad-words": "^3.0.0",
+    "express": "^4.16.4",
+    "firebase": "^6.3.5",
+    "firebase-admin": "^8.3.0",
+    "socket.io": "^2.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bshara94/ChatWeb.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bshara94/ChatWeb"
+  },
+  "homepage": "https://github.com/bshara94/ChatWeb",
+  "description": ""
+}
