@@ -14,11 +14,11 @@
                 <form action='/chat.html'>
                     <label id='lbl0'></label>
                     <label id='lbl1'>E-mail</label>
-                    <input id ='email' type="text" name="username" placeholder="E-mail" required>
+                    <input id ='email' type="text" name="username" placeholder="E-mail" required value="">
                     <label id='lbl2'>Password</label>
-                    <input id ='password' type="password" placeholder="Password" required>
+                    <input id ='password' type="password" placeholder="Password" required value="">
                     <label id='lbl3'>Room</label>
-                    <input id ='room' type="text" name="room" placeholder="Room" required>
+                    <input id ='room' type="text" name="room" placeholder="Room" required value="">
                     <button id='enterm' SignUp="Room" style="display: none;" disabled>Enter</button>
                 </form>
                 <button id='login' onclick="toggleSignIn()">Sign-In</button>
@@ -89,12 +89,7 @@
               document.getElementById("lbl0").innerHTML = "Welcome back "+snapshot.val().name;
                 document.getElementById("email").value = snapshot.val().name;
                 document.getElementById("enterm").disabled = false;
-
-                
-        }, function (error) {
-   console.log("Error: " + error.code);
-});
-           document.getElementById("enterm").style="display:block ;"
+                document.getElementById("enterm").style="display:block ;"
            document.getElementById("login").style="display:none ;"
            document.getElementById("register").style="display:none ;"
            document.getElementById("logout").style="display:block ;"
@@ -105,7 +100,13 @@
            document.getElementById("lbl1").style="display:none ;"
            document.getElementById("lbl2").style="display:none ;"
            document.getElementById("lbl3").style="display:none ;"
-           document.getElementById("enterm").disabled=true ;
+
+                
+        }, function (error) {
+   console.log("Error: " + error.code);
+});
+           
+          
            
         })
             .catch(function(error) {
